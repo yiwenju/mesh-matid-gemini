@@ -62,6 +62,10 @@ World frame is the mesh normalized to Y-up, bounding-box center at the origin, f
 
 Every run checks the cameras: projected mesh vertices must land inside the rendered silhouette (>= 98% in every view), otherwise it stops. This catches axis, handedness, and field-of-view mix-ups, which otherwise fail silently.
 
+## Example
+
+`example/` has a complete run on a sneaker mesh: the script (`run_example.py`), all renders and Gemini maps, comparison sheets, and the numeric checks. See `example/README.md`.
+
 ## Notes and limits
 
 - Gemini sees only gray shapes, so it separates materials that differ in geometry (a shoe's sole, laces, and upper) and merges ones that differ only in appearance (two woods, a printed label). It also tends to under-segment. Expect to inspect results.
